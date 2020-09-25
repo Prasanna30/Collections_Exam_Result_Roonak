@@ -22,18 +22,12 @@ public class Customer{
 	}
 
 	public void setAge(int age) throws AgeCanNotBeNegativeException{
-//		try{
-			if(age<0) {
+		if(age<0) {
 			throw new AgeCanNotBeNegativeException("Age can not be negative");
-			}
-			else {
+		}
+		else {
 			this.age = age;
-//			throw new AgeCanNotBeNegativeException("Valid input");
-			}
-//			}
-//		catch(Exception e){
-//			System.out.println(e);
-//		}
+		}
 	}
 
 	public int getSsn() {
