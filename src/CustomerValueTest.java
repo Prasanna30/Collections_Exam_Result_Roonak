@@ -50,13 +50,6 @@ class CustomerValueTest {
 		int actual = c1.getZipCode();
 		int expected = 95134;
 		assertEquals(expected, actual );
-	}
-	
-	
-	
-	
-	
-	
-	
+	}	
 
 }

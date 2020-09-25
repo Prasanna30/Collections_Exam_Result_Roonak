@@ -26,7 +26,7 @@ class SalarySorter implements Comparator<EmployeeEX>{
 
 class JoinDateSort implements Comparator<EmployeeEX>{
 	public int compare(EmployeeEX o1, EmployeeEX o2) {
-		return o1.getJoiningDate() - o2.getJoiningDate();
+		return o1.getJoiningDate().compareTo(o2.getJoiningDate());
 	}
 	
 }
@@ -36,9 +36,9 @@ class EmployeeEX implements Comparable<EmployeeEX> {
     private String Name = null;
     private int salary= -1;
     private int age = -1;
-    private int joiningDate = -1;
+    private String joiningDate = null;
  
-    public EmployeeEX(int id, String Name, int salary, int age, int join) {
+    public EmployeeEX(int id, String Name, int salary, int age, String join) {
         this.id = id;
         this.Name = Name;
         this.salary = salary;
@@ -68,7 +68,7 @@ class EmployeeEX implements Comparable<EmployeeEX> {
 		return salary;
 	}
 
-	public int getJoiningDate() {
+	public String getJoiningDate() {
 		return joiningDate;
 	}
 
@@ -79,10 +79,10 @@ class EmployeeEX implements Comparable<EmployeeEX> {
 
 public class Q17{
 	public static void main(String args[]) { 
-	 EmployeeEX e1 = new EmployeeEX(1, "aTestName", 2000, 34, 10);
-     EmployeeEX e2 = new EmployeeEX(2, "nTestName", 3000, 30, 12);
-     EmployeeEX e3 = new EmployeeEX(3, "kTestName", 1000, 31, 02);
-     EmployeeEX e4 = new EmployeeEX(4, "dTestName", 5000, 25, 11);
+	 EmployeeEX e1 = new EmployeeEX(1, "aTestName", 2000, 34, "8 Auguest, 2012");
+     EmployeeEX e2 = new EmployeeEX(2, "nTestName", 3000, 30, "12 Auguest, 2011");
+     EmployeeEX e3 = new EmployeeEX(3, "kTestName", 1000, 31, "11 September, 2013");
+     EmployeeEX e4 = new EmployeeEX(4, "dTestName", 5000, 25, "26 December 2011");
 
      List<EmployeeEX> employees = new ArrayList<EmployeeEX>();
      employees.add(e2);
