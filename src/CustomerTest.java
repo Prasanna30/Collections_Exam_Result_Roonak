@@ -8,7 +8,6 @@ class CustomerTest {
 	void testSetAge() {
 		Customer c1 = new Customer();
 		Throwable  exception = assertThrows(AgeCanNotBeNegativeException.class, () -> c1.setAge(-12));
-		
 		assertEquals("Age can not be negative", exception.getMessage()); 
 		
 	}
