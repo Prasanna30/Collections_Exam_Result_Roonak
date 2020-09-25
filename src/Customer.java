@@ -42,8 +42,6 @@ public class Customer{
 		return address;
 	}
 
-
-
 	public void setAddress(String address) {
 		this.address = address;
 	}
@@ -62,13 +60,6 @@ public class Customer{
 
 	public void setZipCode(int zipCode) {
 		this.zipCode = zipCode;
-	}
-
-	public static void main(String[] args) throws AgeCanNotBeNegativeException {
-		Customer c1 = new Customer();
-		c1.setAge(-12);
-		
-
 	}
 
 }
