@@ -8,7 +8,14 @@ public class Customer{
 	private String city;
 	private int zipCode;
 	
-	
+	Customer(String name, int age, int ssn, String address, String city, int zipCode){
+		this.name = name;
+		this.age = age;
+		this.ssn = ssn;
+		this.address =address;
+		this.city = city;
+		this.zipCode =zipCode;
+	}
 	public String getName() {
 		return name;
 	}
